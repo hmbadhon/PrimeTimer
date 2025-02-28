@@ -3,10 +3,11 @@ import '../../core/app/app_flavor.dart';
 class ApiUrls {
   static String baseUrl = getServerUrl();
   static const String liveUrl =
-      'https://test.hmbadhon.me/api/v1/'; //live server
-  static const String devUrl = 'https://test.hmbadhon.me/api/v1/'; // dev server
+      'http://www.randomnumberapi.com/api/v1.0/'; //live server
+  static const String devUrl =
+      'http://www.randomnumberapi.com/api/v1.0/'; // dev server
   static const String testUrl =
-      'https://test.hmbadhon.me/api/v1/'; // test server
+      'http://www.randomnumberapi.com/api/v1.0/'; // test server
 
   // get current flavor url
   static String getServerUrl() {
@@ -22,6 +23,5 @@ class ApiUrls {
   }
 
   // api url name start here //
-  static const String login = 'login';
-  static const String forgot = 'forgot-password';
+  static const String random = 'random';
 }
