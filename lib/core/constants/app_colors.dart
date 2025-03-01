@@ -29,6 +29,7 @@ class AppColors {
   static const kWhiteColor = Colors.white;
   static const kBlackColor = Colors.black;
   static const kBlackColor2 = Color(0xFF242527);
+  static const kBlackColor3 = Color(0xFF151c20);
   static const kPaymentStatus = Color(0xFFFFB700);
   static const kFbColors = Color(0xFF2B87FF); //2B87FF / 0065FF
   static const kDarkGrayColor = Color(0xFF4E4E4E);
@@ -45,6 +46,7 @@ class AppColors {
   static const kLiteDarkColor = Color(0xFF232323);
   static const kErrorColor = Color(0xFFFF2424);
   static const kSuccessColor = Color(0xFF2EB843);
+  static const kSuccessColor2 = Color(0xFF69cf78);
   static const kSaleColor = Color(0xFFF14705);
   static const kIconColor = Color(0xFFF9784F);
   static const kSubscriptionColor = Color(0xFFF2C822);

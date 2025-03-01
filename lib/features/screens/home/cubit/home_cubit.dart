@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:injectable/injectable.dart';
+import 'package:prime_timer/features/screens/home/models/prime_model.dart';
 
 import '../../../../core/app/app_dependency.dart';
 import '../../../../core/app/app_preference.dart';
@@ -32,7 +33,12 @@ class HomeCubit extends Cubit<HomeState> {
         status = isPrime(data[0]);
         log("isPrime ==========> [$status]");
         if (status) {
-          ///TODO: store data in preferences
+          await _appPreferences.savePrimeData(PrimeModel(
+              data: _appPreferences.getPrimeData().data
+                ?..add(PrimeData(
+                  primeNumber: data[0],
+                  dateTime: DateTime.now(),
+                ))));
         }
       },
     );

@@ -30,7 +30,7 @@ class ApiClient {
           Map<String, dynamic> header = <String, dynamic>{};
           header[contentType] = applicationJson;
           header[accept] = applicationJson;
-          String token = await _appPreferences.getUserAuthToken();
+          String token = "";
           if (token.isNotEmpty) {
             header[authorization] = "Bearer $token";
           }
