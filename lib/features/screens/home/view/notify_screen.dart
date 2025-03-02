@@ -52,21 +52,21 @@ class NotifyScreen extends StatelessWidget {
                       fontWeight: boldFont,
                     ),
                   ),
-                  Spacer(),
-                  Align(
-                    alignment: Alignment.center,
-                    child: SizedBox(
-                      width: .25.sw,
-                      child: DefaultBtn(
-                        title: "Close",
-                        btnColor: AppColors.kSuccessColor2,
-                        textColor: AppColors.kBlackColor,
-                        onPress: () => Navigator.pushNamedAndRemoveUntil(
-                            context, Routes.home, ModalRoute.withName('/')),
-                      ),
+                ],
+                Spacer(),
+                Align(
+                  alignment: Alignment.center,
+                  child: SizedBox(
+                    width: .25.sw,
+                    child: DefaultBtn(
+                      title: "Close",
+                      btnColor: AppColors.kSuccessColor2,
+                      textColor: AppColors.kBlackColor,
+                      onPress: () => Navigator.pushNamedAndRemoveUntil(
+                          context, Routes.home, ModalRoute.withName('/')),
                     ),
                   ),
-                ]
+                ),
               ],
             ),
           ),

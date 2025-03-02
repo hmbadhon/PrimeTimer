@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:intl/intl.dart';
 import 'package:prime_timer/core/constants/app_size.dart';
+import 'package:prime_timer/features/components/custom_extensions.dart';
 import 'package:prime_timer/features/router/routes.dart';
 import 'package:prime_timer/features/screens/home/cubit/home_cubit.dart';
 
@@ -58,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    DateFormat('HH:mm').format(DateTime.now()),
+                    DateTime.now().timeFormat24hrs,
                     style: kHeadLine35,
                   ),
                   6.verticalSpace,
@@ -66,12 +66,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     TextSpan(
                       children: [
                         TextSpan(
-                            text: DateFormat("E d. MMM ", 'de_DE')
-                                .format(DateTime.now()),
+                            text: DateTime.now().dayDateWeekFormatDE,
                             style: kRegularLine18),
                         TextSpan(
-                            text:
-                                "KW ${DateFormat('w', 'de_DE').format(DateTime.now())}",
+                            text: "KW ${DateTime.now().isoWeekNumber}",
                             style: kSmallLine12),
                       ],
                     ),
